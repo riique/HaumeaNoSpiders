@@ -1,0 +1,82 @@
+{
+  "entity.spider.ambient": {
+    "subtitle": "subtitles.entity.spider.ambient",
+    "sounds": [
+      "mob/slime/small1",
+      "mob/slime/small2",
+      "mob/slime/small3",
+      "mob/slime/small4",
+      "mob/slime/small5",
+      "mob/slime/attack1",
+      "mob/slime/attack2",
+      "mob/spider/say1",
+      "mob/spider/say2",
+      "mob/spider/say3",
+      "mob/spider/say4"
+    ]
+  },
+  "entity.spider.hurt": {
+    "subtitle": "subtitles.entity.spider.hurt",
+    "sounds": [
+      "mob/slime/big1",
+      "mob/slime/big2",
+      "mob/slime/big3",
+      "mob/slime/big4",
+      "mob/spider/say1",
+      "mob/spider/say2",
+      "mob/spider/say3",
+      "mob/spider/say4"
+    ]
+  },
+  "entity.spider.death": {
+    "subtitle": "subtitles.entity.spider.death",
+    "sounds": [
+      "mob/slime/big1",
+      "mob/slime/big2",
+      "mob/slime/big3",
+      "mob/slime/big4",
+      "mob/spider/death"
+    ]
+  },
+  "entity.spider.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      {
+        "name": "mob/slime/small1",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/slime/small2",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/slime/small3",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/slime/small4",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/slime/small5",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/spider/step1",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/spider/step2",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/spider/step3",
+        "volume": 0.75
+      },
+      {
+        "name": "mob/spider/step4",
+        "volume": 0.75
+      }
+    ]
+  }
+}

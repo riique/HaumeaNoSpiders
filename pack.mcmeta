@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 15,
+    "supported_formats": {
+      "min_inclusive": 1,
+      "max_inclusive": 99
+    },
+    "description": "§6HaumeaNoSpiders§r\n§7Aranhas → baus de madeira§r\n§8Sons de slime · EMF opcional"
+  }
+}

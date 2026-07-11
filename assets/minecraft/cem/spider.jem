@@ -1,0 +1,417 @@
+{
+  "texture": "textures/entity/spider/mimic",
+  "textureSize": [
+    64,
+    64
+  ],
+  "shadowSize": 0.55,
+  "models": [
+    {
+      "part": "body",
+      "id": "mimic_base",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        -9,
+        -9
+      ],
+      "boxes": [
+        {
+          "uvUp": [
+            0,
+            0,
+            14,
+            14
+          ],
+          "uvDown": [
+            14,
+            0,
+            28,
+            14
+          ],
+          "uvNorth": [
+            0,
+            14,
+            14,
+            24
+          ],
+          "uvSouth": [
+            14,
+            14,
+            28,
+            24
+          ],
+          "uvWest": [
+            28,
+            14,
+            42,
+            24
+          ],
+          "uvEast": [
+            42,
+            14,
+            56,
+            24
+          ],
+          "coordinates": [
+            -7,
+            0,
+            -7,
+            14,
+            10,
+            14
+          ]
+        }
+      ],
+      "submodels": [
+        {
+          "id": "foot_fl",
+          "invertAxis": "xy",
+          "translate": [
+            4,
+            0,
+            -5
+          ],
+          "boxes": [
+            {
+              "textureOffset": [
+                0,
+                48
+              ],
+              "coordinates": [
+                0,
+                0,
+                0,
+                3,
+                3,
+                3
+              ]
+            }
+          ],
+          "animations": [
+            {
+              "this.ty": "0.15*sin(limb_swing*1.2 + 12)*limb_speed"
+            }
+          ]
+        },
+        {
+          "id": "foot_fr",
+          "invertAxis": "xy",
+          "translate": [
+            -5,
+            0,
+            -5
+          ],
+          "boxes": [
+            {
+              "textureOffset": [
+                0,
+                48
+              ],
+              "coordinates": [
+                0,
+                0,
+                0,
+                3,
+                3,
+                3
+              ]
+            }
+          ],
+          "animations": [
+            {
+              "this.ty": "0.15*sin(limb_swing*1.2 + 13)*limb_speed"
+            }
+          ]
+        },
+        {
+          "id": "foot_bl",
+          "invertAxis": "xy",
+          "translate": [
+            4,
+            0,
+            3
+          ],
+          "boxes": [
+            {
+              "textureOffset": [
+                0,
+                48
+              ],
+              "coordinates": [
+                0,
+                0,
+                0,
+                3,
+                3,
+                3
+              ]
+            }
+          ],
+          "animations": [
+            {
+              "this.ty": "0.15*sin(limb_swing*1.2 + 14)*limb_speed"
+            }
+          ]
+        },
+        {
+          "id": "foot_br",
+          "invertAxis": "xy",
+          "translate": [
+            -5,
+            0,
+            3
+          ],
+          "boxes": [
+            {
+              "textureOffset": [
+                0,
+                48
+              ],
+              "coordinates": [
+                0,
+                0,
+                0,
+                3,
+                3,
+                3
+              ]
+            }
+          ],
+          "animations": [
+            {
+              "this.ty": "0.15*sin(limb_swing*1.2 + 15)*limb_speed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part": "head",
+      "id": "mimic_lid",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        -5,
+        3
+      ],
+      "boxes": [
+        {
+          "uvUp": [
+            0,
+            24,
+            14,
+            38
+          ],
+          "uvDown": [
+            14,
+            24,
+            28,
+            38
+          ],
+          "uvNorth": [
+            0,
+            38,
+            14,
+            43
+          ],
+          "uvSouth": [
+            14,
+            38,
+            28,
+            43
+          ],
+          "uvWest": [
+            28,
+            38,
+            42,
+            43
+          ],
+          "uvEast": [
+            42,
+            38,
+            56,
+            43
+          ],
+          "coordinates": [
+            -7,
+            10,
+            -7,
+            14,
+            5,
+            14
+          ]
+        }
+      ],
+      "animations": [
+        {
+          "this.rx": "torad(clamp(-8 - 12*limb_speed + 4*sin(limb_swing*0.4)*limb_speed + if(is_aggressive, -18, 0), -35, 5))",
+          "this.ry": "torad(head_yaw * 0.12)",
+          "this.rz": "0"
+        }
+      ]
+    },
+    {
+      "part": "neck",
+      "id": "mimic_neck_hide",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg1",
+      "id": "hide_leg1",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg2",
+      "id": "hide_leg2",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg3",
+      "id": "hide_leg3",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg4",
+      "id": "hide_leg4",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg5",
+      "id": "hide_leg5",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg6",
+      "id": "hide_leg6",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg7",
+      "id": "hide_leg7",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    },
+    {
+      "part": "leg8",
+      "id": "hide_leg8",
+      "invertAxis": "xy",
+      "translate": [
+        0,
+        0,
+        0
+      ],
+      "boxes": [],
+      "animations": [
+        {
+          "this.sx": "0",
+          "this.sy": "0",
+          "this.sz": "0"
+        }
+      ]
+    }
+  ]
+}
