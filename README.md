@@ -1,133 +1,96 @@
 # HaumeaNoSpiders
 
-Resource pack para Minecraft que troca **aranhas** e **aranhas da caverna** por **mímicos de baú de madeira** — visual calmo, sem carinha e sem o visual clássico de aranha.
+Transforme aranhas e aranhas da caverna em pequenos baús de madeira e continue explorando sem o visual clássico que causa desconforto.
 
-Ideal para quem tem aversão a aranhas e quer continuar jogando sem o susto visual (e sonoro) delas.
+O HaumeaNoSpiders é um pacote de recursos para Minecraft Java Edition voltado a jogadores com aversão ou medo de aranhas. Ele substitui texturas, olhos e sons; com suporte a modelos personalizados, também troca a silhueta da entidade por um mímico em formato de baú.
 
----
+## O que muda
 
-## O que o pack faz
+| Elemento | Resultado |
+| --- | --- |
+| Aranha | textura de mímico de madeira |
+| Aranha da caverna | variação própria do mímico |
+| Olhos | textura transparente, sem olhos brilhantes |
+| Sons | eventos de ambiente, dano, passos e morte remapeados |
+| Modelo | baú animado quando CEM está disponível |
 
-| Conteúdo | Mudança |
-|----------|---------|
-| **Aranha** | Textura de baú de madeira (mímico) |
-| **Aranha da caverna** | Mesma madeira de baú |
-| **Olhos / boca** | Removidos — só tábuas e trava dourada |
-| **Sons** | Sons de **slime** (ambiente, passos, dano, morte) |
-| **Modelo 3D de baú** *(opcional)* | Com EMF ou OptiFine (CEM) |
+O comportamento, a IA, a vida, o dano e a hitbox continuam sendo os da entidade original. Este é um pacote visual e sonoro; ele não remove aranhas do jogo.
 
-> **Limitação do vanilla:** sem EMF/OptiFine o Minecraft **não troca o modelo** da entidade. O formato base ainda é o da aranha (perninhas), mas a textura é toda de baú. Com **EMF** (Fabric) ou **OptiFine**, o pack usa modelos CEM para um visual mais de baú.
+## Duas formas de usar
 
----
+### Somente o pacote de recursos
 
-## Requisitos
+Funciona sem mods e troca texturas e sons. Como o Minecraft vanilla não aplica os arquivos CEM, a geometria básica da aranha pode continuar visível, apenas com a aparência de madeira.
 
-### Mínimo (qualquer versão, sem mods)
+### Com modelo de baú
 
-- Minecraft Java Edition  
-- Este resource pack ativado  
+Para esconder as pernas e usar o modelo completo:
 
-Funciona **só com resource pack**: texturas + sons.
+- em Fabric, use [Entity Model Features (EMF)](https://modrinth.com/mod/entity-model-features) e, de preferência, [Entity Texture Features (ETF)](https://modrinth.com/mod/entitytexturefeatures);
+- em uma instalação compatível, use OptiFine com suporte a Custom Entity Models.
 
-### Recomendado (modelo de baú completo)
+Não misture OptiFine com uma instalação Fabric comum. Mantenha loader, mods e Minecraft na mesma versão.
 
-**Fabric** (ex.: 1.20.2):
+## Instalação
 
-1. [Fabric API](https://modrinth.com/mod/fabric-api)  
-2. [Entity Model Features (EMF)](https://modrinth.com/mod/entity-model-features)  
-3. [Entity Texture Features (ETF)](https://modrinth.com/mod/entitytexturefeatures) *(recomendado junto com EMF)*  
-
-**Ou** OptiFine na versão do jogo (launcher oficial / Forge — **não** misture OptiFine com Fabric).
-
-> No Fabric, use **EMF + ETF**, não OptiFine.
-
----
-
-## Como instalar
-
-### 1. Baixar o pack
-
-- Clone o repositório, **ou**  
-- Em GitHub: **Code → Download ZIP**, depois extraia a pasta do pack  
-
-A pasta do pack deve conter `pack.mcmeta` e a pasta `assets` na raiz (não uma pasta “extra” em volta se você zipar de novo).
-
-### 2. Colocar em Resource Packs
-
-Copie a pasta do pack para:
-
-```text
-.minecraft/resourcepacks/
-```
-
-No Windows, o caminho costuma ser:
+1. Baixe o repositório em **Code → Download ZIP** ou faça o clone.
+2. Garanta que `pack.mcmeta` e `assets/` estejam na raiz da pasta ou do ZIP final.
+3. Copie para:
 
 ```text
 %AppData%\.minecraft\resourcepacks\
 ```
 
-### 3. Ativar no jogo
+4. No jogo, abra **Opções → Pacotes de recursos**.
+5. Ative o HaumeaNoSpiders e deixe-o acima de outros pacotes que alterem aranhas.
+6. Use `F3 + T` se precisar recarregar os recursos.
 
-1. Abra o Minecraft  
-2. **Opções → Resource Packs**  
-3. Mova **HaumeaNoSpiders** (ou o nome da pasta) para a lista da **direita**  
-4. Deixe-o **no topo** se usar outros packs  
-5. Confirme e entre no mundo  
+Para o modelo completo no Fabric, instale EMF e ETF em `.minecraft/mods/` antes de iniciar o jogo.
 
-Se algo não atualizar: **F3 + T** (recarrega recursos) ou reinicie o jogo.
+## Compatibilidade
 
-### 4. (Opcional) Mods no Fabric
+O pacote foi usado principalmente com Fabric 1.20.2 e EMF/ETF. O `pack.mcmeta` declara uma faixa ampla em `supported_formats`, mas isso não garante que todas as versões futuras ou antigas interpretem texturas, sons e CEM da mesma maneira.
 
-Coloque EMF e ETF em `.minecraft/mods/`, na **mesma versão** do Minecraft (ex.: 1.20.2), com Fabric Loader + Fabric API.
+Se o Minecraft exibir um aviso de versão:
 
----
+1. confirme se o pacote ainda carrega;
+2. teste texturas, sons e as duas variantes de aranha;
+3. use versões de EMF/ETF ou OptiFine compatíveis com o jogo.
 
-## Estrutura do pack
+## Estrutura
 
 ```text
 HaumeaNoSpiders/
 ├── pack.mcmeta
 ├── pack.png
-├── README.md
 └── assets/minecraft/
     ├── sounds.json
-    ├── sounds/mob/spider/          # áudios (slime)
-    ├── textures/entity/spider/     # texturas mímico
+    ├── sounds/mob/spider/
+    ├── textures/entity/spider/
     ├── textures/entity/spider_eyes.png
-    ├── optifine/cem/               # modelos CEM (EMF/OptiFine)
+    ├── cem/
     ├── emf/cem/
-    └── cem/
+    └── optifine/cem/
 ```
 
----
+As três cópias dos modelos `.jem` atendem caminhos reconhecidos por diferentes carregadores de CEM.
 
-## Compatibilidade
+## Limitações
 
-- **Texturas e sons:** ampla (Java Edition com resource packs modernos)  
-- **`pack_format` / `supported_formats`:** pensado para cobrir várias versões  
-- **CEM (`.jem`):** OptiFine e EMF  
+- A hitbox e a movimentação continuam sendo de aranha.
+- Sem CEM, a troca de geometria não acontece.
+- Outro pacote com prioridade maior pode sobrescrever os mesmos assets.
+- Mudanças em EMF, OptiFine ou no formato dos pacotes podem exigir atualização.
+- O pacote não altera nomes, drops, spawn ou mecânicas.
 
-Testado principalmente no fluxo **Fabric 1.20.2** com EMF/ETF.
+## Contribuição
 
----
+Relate a versão do Minecraft, o carregador, a versão de EMF/ETF ou OptiFine e quais partes falharam: textura, som ou modelo. Pull requests devem manter as duas entidades e os caminhos CEM equivalentes.
 
-## Notas
+## Créditos e direitos
 
-- A **hitbox** continua a da aranha (limite de resource pack).  
-- Aranha e aranha da caverna usam a **mesma ideia visual** (madeira de baú).  
-- Sons oficiais de slime do jogo, remapeados para os eventos da aranha.  
-
----
-
-## Créditos
-
-- Pack original: **HaumeaNoSpiders**  
-- Inspiração de conceito: packs de “arachnophobia” / mímicos no lugar de aranhas  
-- Sons de slime: assets vanilla do Minecraft (Mojang)  
-
----
+HaumeaNoSpiders é um projeto independente e não é afiliado à Mojang ou à Microsoft. Minecraft, sua marca e seus assets pertencem aos respectivos titulares.
 
 ## Licença
 
-Uso livre para jogar e modificar.  
-**Minecraft** e seus assets oficiais pertencem à Mojang/Microsoft. Este pack não é afiliado à Mojang.
+O código e os arquivos próprios do projeto são distribuídos sob a [Licença MIT](LICENSE). Essa licença não concede direitos sobre conteúdo ou marcas de terceiros.
